@@ -1,0 +1,39 @@
+  <div ngbNav #nav="ngbNav" class=" navbar-expand-lg navbar-dark  bg-dark text-white  sticky-top">
+    <a class="navbar-brand" href="#">Cat Store</a>
+    <ul class="navbar-nav mr-auto">
+    <li ngbNavItem>
+      <a ngbNavLink>Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li ngbNavItem>
+        <div ngbDropdown class="d-inline-block">
+            <button class="btn bg-dark text-white" id="dropdownBasic1" ngbDropdownToggle>Products</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+            </div>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink href="#">Sets</a>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink href="#">Promotions</a>
+      </li>
+    </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn border my-2 my-sm-0 btn-secondary" type="submit" >
+          <fa-icon [icon]="faArrowCircleRight"></fa-icon>
+        </button>
+      </form>
+      <button type="button" class=" btn btn-secondary ml-2">
+        <fa-icon [icon]="faShoppingCart"></fa-icon>
+        </button>
+        <button type="button" class="btn btn-secondary ml-2">
+          <span>Log In</span>
+          <fa-icon class="ml-1"[icon]="faSignInAlt"></fa-icon>
+      </button>
+    </div>
+  
+
