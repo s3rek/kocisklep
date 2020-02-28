@@ -2,3 +2,15 @@
     right: 15px;
     position: absolute;
 }
+
+.cart-button{
+    position:relative
+}
+
+.counter{
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 2px 5px;
+    position: absolute;
+}

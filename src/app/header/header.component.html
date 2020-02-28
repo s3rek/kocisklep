@@ -32,18 +32,18 @@
     <li>
       <form class="form-inline text-center pr-0 pt-2">
         <input class="form-control mr-0" type="search" placeholder="Search" aria-label="Search">
-      </form>
-      </li>
-      <li>
-      <button class="mt-2  align-middle btn border btn-secondary" type="submit" >
+      
+      <button class="align-middle btn border btn-secondary" type="submit" >
         <fa-icon [icon]="faArrowCircleRight"></fa-icon>
       </button>
+    </form>
     </li>
       <li>
-      <button type="button" class="mt-2 rounded-circle btn btn-secondary ml-2">
-        <fa-icon [icon]="faShoppingCart"></fa-icon>
+      <button type="button" class="cart-button mt-2 rounded-circle btn btn-secondary ml-2 p-2">
+        <fa-icon class="fa-lg" [icon]="faShoppingCart"></fa-icon>
+        <span class="counter badge badge-pill badge-dark ">0</span>
         </button>
-        <button type="button" class="mt-2 btn btn-secondary ml-2">
+        <button type="button" class="mt-2 btn btn-secondary ml-3">
           <span>Log In</span>
           <fa-icon class="ml-1"[icon]="faSignInAlt"></fa-icon>
       </button>
