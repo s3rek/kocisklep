@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   faShoppingCart = faShoppingCart;
   faSignInAlt=faSignInAlt;
   faArrowCircleRight=faArrowCircleRight;
+  public isMenuCollapsed = true;
+  
   constructor() { }
 
   ngOnInit(): void {

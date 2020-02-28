@@ -1,10 +1,17 @@
   <div ngbNav #nav="ngbNav" class=" navbar-expand-lg navbar-dark  bg-dark text-white  sticky-top">
-    <a class="navbar-brand" href="#">Cat Store</a>
+    <a class="navbar-brand p-2" href="#">Cat Store</a>
+    
+    <button placement="top-right" class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      &#9776;
+    </button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-    <li ngbNavItem>
-      <a ngbNavLink>Home <span class="sr-only">(current)</span></a>
+
+    <li ngbNavItem class="w-25 p-2 text-center">
+      <a ngbNavLink (click)="isMenuCollapsed = true">Home <span class="sr-only">(current)</span></a>
     </li>
-    <li ngbNavItem>
+    <li ngbNavItem class="w-25 p-2 text-center">
         <div ngbDropdown class="d-inline-block">
             <button class="btn bg-dark text-white" id="dropdownBasic1" ngbDropdownToggle>Products</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -14,26 +21,35 @@
             </div>
             </div>
     </li>
-    <li ngbNavItem>
+    <li ngbNavItem class="w-25 p-2 text-center">
         <a ngbNavLink href="#">Sets</a>
       </li>
-      <li ngbNavItem>
+      <li ngbNavItem class="w-25 p-2 text-center">
         <a ngbNavLink href="#">Promotions</a>
       </li>
     </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn border my-2 my-sm-0 btn-secondary" type="submit" >
-          <fa-icon [icon]="faArrowCircleRight"></fa-icon>
-        </button>
+  </div>
+  <ul class="navbar-nav" >
+    <li>
+      <form class="form-inline text-center pr-0 pt-2">
+        <input class="form-control mr-0" type="search" placeholder="Search" aria-label="Search">
       </form>
-      <button type="button" class=" btn btn-secondary ml-2">
+      </li>
+      <li>
+      <button class="mt-2  align-middle btn border btn-secondary" type="submit" >
+        <fa-icon [icon]="faArrowCircleRight"></fa-icon>
+      </button>
+    </li>
+      <li>
+      <button type="button" class="mt-2 rounded-circle btn btn-secondary ml-2">
         <fa-icon [icon]="faShoppingCart"></fa-icon>
         </button>
-        <button type="button" class="btn btn-secondary ml-2">
+        <button type="button" class="mt-2 btn btn-secondary ml-2">
           <span>Log In</span>
           <fa-icon class="ml-1"[icon]="faSignInAlt"></fa-icon>
       </button>
+      </li>
+    </ul>
     </div>
   
 
